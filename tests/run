@@ -6,7 +6,7 @@ usage_exit() {
 }
 user=$(id -un)
 group=$(id -gn)
-ansible_opts="-e ansible_unit_test=true -e ansible_unit_test_user=$user -e ansible_unit_test_group=$group"
+ansible_opts="-e ansible_unit_test=true -e ansible_unit_test_user=$user -e become_user=$user -e ansible_unit_test_group=$group"
 
 outputs="outputs"
 
