@@ -19,7 +19,7 @@
 
 - name: adds systemd entry for service
   become: yes
-  template: src="service.j2" dest="{{ ansible_unit_test_prefix_dir }}/{{ systemd_service_systemd_dir }}/{{ systemd_service_name }}.service"
+  template:
     src: service.j2
     dest: "{{ ansible_unit_test_prefix_dir }}/{{ systemd_service_systemd_dir }}/{{ systemd_service_name }}.service"
   register: service_file
